@@ -10,24 +10,9 @@ This project provides a simple web server to access and query iMessage data from
 - [Just](https://github.com/casey/just) (optional)
     - If you don't install just, copy commands from Justfile and run by hand
 
-## Setup
-
-1. Clone this repository.
-2. Install dependencies:
-   ```
-   bundle install
-   ```
+ 
 
 ## Usage
-
-### Local Development
-
-1. Run the server:
-   ```ruby
-   ruby src/serve.rb
-   ```
-
-2. Access the API at `http://localhost:4567`
 
 ### Docker
 
@@ -35,6 +20,8 @@ This project provides a simple web server to access and query iMessage data from
    ```
    just copydb
    ```
+
+   *This step is only necessary because mounting your Messages DB directly from `~/Library/Messages/chat.db` doesn't work properly.*
 
 2. Run the server:
    ```
@@ -45,6 +32,23 @@ This project provides a simple web server to access and query iMessage data from
    ```
    just docker-open
    ```
+
+### Local Development
+
+1. Clone this repository.
+2. Install dependencies:
+   ```
+   bundle install
+   ```
+
+3. Run the server:
+   ```ruby
+   ruby src/serve.rb
+   ```
+
+4. Access the API at `http://localhost:4567`
+
+
 
 ## API Endpoints
 

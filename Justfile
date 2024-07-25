@@ -1,6 +1,5 @@
 copydb:
-    rm chatc.db || true 
-    cp /Users/mharris717/Library/Messages/chat.db chat.db
+    cp ~/Library/Messages/chat.db .
 
 docker: 
     docker run -P --name imessage-serve -v `pwd`/chat.db:/dbdata/chat.db:ro mharris717/imessage-query
